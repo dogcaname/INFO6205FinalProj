@@ -1,4 +1,4 @@
-# INFO6205FinalProj
+# INFO6205FinalProject
 - For this project, we are going to create a Ranking System
 
 - Name: Tao Di, NUID: 001056976
