@@ -80,10 +80,7 @@ public class RankSystem {
      *
      * */
     public boolean addcompete(String home,String away,String ftr,int fthg,int ftg){
-
         try {
-
-
             int[] score = computevalue(ftr, fthg, ftg);
             int hval = score[0];
             int aval = score[1];

@@ -12,7 +12,6 @@ public class Main {
             RankSystem rankSystem=new RankSystem();
             System.out.println(file);
             while ((line = in.readLine()) != null) {
-
                 String[] unitlist=line.split(",");
                 if(isfirst){
                     isfirst=false;
@@ -20,8 +19,6 @@ public class Main {
                 }
                 if(unitlist.length>=7)
                     rankSystem.addcompete(unitlist[2],unitlist[3],unitlist[6],Integer.parseInt(unitlist[4]),Integer.parseInt(unitlist[5]));
-
-
             }
             rankSystem.computepagerank();
             rankSystem.getRank();
@@ -34,19 +31,15 @@ public class Main {
             }else{
                 System.out.println(home+" vs "+away+" "+pxy);
             }
-
-
         } catch (IOException e) {
             System.out.println(e);
         }
-
     }
     private static  void readcsv(String path){
         File file=new File(path);
         File[] csvlist=file.listFiles(new FileFilter() {
             @Override
             public boolean accept(File pathname) {
-
                 return pathname.isFile()&&pathname.getName().endsWith(".csv");
             }
         });
@@ -65,13 +58,11 @@ public class Main {
 //            System.out.println(file1.getPath());
             readfile(file1.getPath());
         }
-
     }
 
     public static void main(String[] args) {
         // write your code here
         String databasepath="./datasets";
         readcsv(databasepath);
-
     }
 }
